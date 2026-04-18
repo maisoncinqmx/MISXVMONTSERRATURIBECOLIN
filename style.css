@@ -1,0 +1,206 @@
+/* ===== RESET ===== */
+*{
+  box-sizing: border-box;
+}
+h2{
+font-family: parisienne, cursive;
+ color:#6532C4;
+}
+p{
+  font-family: eb Garamond, serif;
+  color:#333;
+}
+html, body{
+  margin:0;
+  padding:0;
+  overflow-x:hidden;
+  font-family: Arial, sans-serif;
+  text-align:center;
+}
+
+/* ===== SECCIONES ===== */
+section{
+  position: relative;
+  width:100%;
+  padding:60px 20px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  background-size:cover;
+  background-position:center;
+}
+
+/* ===== ESQUINEROS ===== */
+.esquina{
+  position:absolute;
+  width:70px;
+  z-index:2;
+}
+
+.top-left{ top:0; left:0; }
+.top-right{ top:0; right:0; }
+.bottom-left{ bottom:0; left:0; }
+.bottom-right{ bottom:0; right:0; }
+
+/* ===== PORTADA ===== */
+.portada{
+  background-image:url("img/portada.jpeg");
+}
+
+.portada-central{
+  width:95%;
+  max-width:700px;
+}
+
+.frase{
+  font-family: eb Garamond, serif;
+  font-size:clamp(16px, 4vw, 22px);
+  max-width:600px;
+  line-height:1.6;
+}
+
+/* ===== FOTOS ===== */
+.foto-separador img,
+.foto-separador2 img{
+  background-image:url("img/portada.jpeg");
+  width:95%;
+  max-width:750px;
+  border-radius:20px;
+  border:8px solid #e1bee7;
+}
+
+/* ===== PADRES / PADRINOS ===== */
+.padres, .padrinos{
+  background-image:url("img/portada.jpeg");
+}
+
+.padres h2, .padrinos h2{
+  font-family:'Parisienne', cursive;
+  font-size:clamp(30px, 6vw, 60px);
+  color:#6532C4;
+}
+
+.padres p, .padrinos p{
+    font-family: eb Garamond, serif;
+  font-size:clamp(18px, 4vw, 26px);
+}
+
+/* ===== MENSAJE ===== */
+.mensaje{
+  background:#e1cbf6;
+}
+
+.mensaje p{
+  font-family: eb Garamond, serif;
+  font-size:clamp(16px, 4vw, 22px);
+}
+
+/* ===== GRID EVENTO ===== */
+.evento-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  width:100%;
+}
+
+.evento-grid img{
+  width:100%;
+  display:block;
+}
+
+.misa, .recepcion{
+  background-image:url("img/portada.jpeg");  
+  padding:20px;
+}
+
+.misa h2, .recepcion h2{
+  font-family:'Parisienne', cursive;
+  font-size:clamp(24px,5vw,40px);
+  color:#6532C4;
+}
+
+.misa p, .recepcion p{
+  font-family: eb Garamond, serif;
+  font-size:clamp(16px,4vw,22px);
+}
+
+/* ===== VESTIMENTA ===== */
+.vestimenta{
+  background-image:url("img/portada.jpeg");
+}
+
+.icono-v{
+  width:clamp(50px, 12vw, 90px);
+}
+
+/* ===== FOTO VESTIDO ===== */
+.foto-vestimenta{
+  background-image:url("img/portada.jpeg");
+  width:95%;
+  max-width:500px;
+  border-radius:20px;
+  border:8px solid #e1bee7;
+}
+
+/* ===== CONTADOR ===== */
+.contador{
+  background:#e1cbf6;
+}
+
+.time-num{
+    font-family: eb Garamond, serif;
+  font-size:clamp(18px,5vw,28px);
+}
+
+/* ===== FOTO 4 ===== */
+.foto4-img{
+  background-image:url("img/portada.jpeg");
+  width:95%;
+  max-width:600px;
+  border-radius:20px;
+  border:8px solid #e1bee7;
+}
+
+/* ===== REGALOS ===== */
+.regalos{
+  background-image:url("img/portada.jpeg");
+}
+
+.regalos p{
+  font-family: eb Garamond, serif;
+  font-size:clamp(16px,4vw,22px);
+}
+
+/* ===== CONFIRMACION ===== */
+.confirmacion{
+  background-image:url("img/portada.jpeg");
+}
+
+.confirmacion input{
+  width:120px;
+}
+
+/* ===== OVERLAY ===== */
+#overlay{
+  position:fixed;
+  width:100%;
+  height:100%;
+  background-image:url("img/portada.jpeg");
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  z-index:9999;
+}
+
+/* ===== 📱 MOBILE ===== */
+@media (max-width:768px){
+
+  section{
+    padding:40px 15px;
+  }
+
+  .evento-grid{
+    grid-template-columns:1fr;
+  }
+
+}
