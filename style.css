@@ -1,0 +1,991 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  color: rgba(7, 7, 7, 0.941);
+}
+
+/* ===== OVERLAY ===== */
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background-image: url("img/portada.jpeg");
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 9999;
+
+  transition: transform 1s ease;
+}
+
+/* ANIMACIÓN SALIDA HACIA ARRIBA */
+#overlay.ocultar {
+  transform: translateY(-100%);
+}
+
+/* CONTENIDO */
+.contenido-overlay {
+  text-align: center;
+}
+
+/* IMAGEN CENTRAL */
+.logo-overlay {
+  width: 280px;
+  margin-bottom: 20px;
+}
+
+/* ===== FECHA ===== */
+.fecha {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+
+  margin-bottom: 25px;
+}
+
+.texto-fecha {
+  font-family: 'EB Garamond', serif;
+  font-size: 28px;
+  letter-spacing: 3px;
+}
+
+.linea {
+  width: 60px;
+  height: 3px;
+  background: #d4af37;
+  /* dorado */
+  border-radius: 5px;
+}
+
+/* BOTÓN */
+#abrir {
+  font-family: 'EB Garamond', serif;
+  font-size: 18px;
+
+  padding: 12px 25px;
+
+  border-radius: 20px;
+  border: none;
+
+  background: #8c49ff;
+  color: white;
+
+  cursor: pointer;
+
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+#abrir:hover {
+  transform: scale(1.05);
+}
+
+/* ===== BOTÓN MÚSICA ===== */
+#toggleMusica {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+
+  z-index: 9999;
+
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+
+  padding: 10px;
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  font-size: 18px;
+
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-blend-mode: darken;
+}
+
+.animar {
+  opacity: 0;
+  transform: translateY(60px);
+  /* más desplazamiento */
+  transition: all 3.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.animar.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* PORTADA */
+.portada {
+  background-image: url("img/portada.jpeg");
+}
+
+.portada-central {
+  width: 90%;
+  max-width: 600px;
+  height: auto;
+
+  display: block;
+  margin: 0 auto;
+
+  /* 🔥 ESTO ES LA CLAVE PARA SVG */
+  object-fit: contain;
+}
+
+/* TEXTO CON TIPOGRAFÍA ELEGANTE */
+.frase {
+  font-size: 25px;
+  max-width: 600px;
+  margin-bottom: 20px;
+  font-family: 'EB Garamond', serif;
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+  color: #000000;
+}
+
+/* LÍNEA DECORATIVA */
+.linea {
+  width: 550px;
+  height: 3px;
+  background-color: #c082df;
+  border-radius: 5px;
+}
+
+.foto-separador {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  /* 🔥 centra la imagen */
+  padding: 20px 0;
+  /* 🔥 espacio arriba y abajo */
+  background-image: url("img/portada.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+
+.foto-separador img {
+  width: 90%;
+  max-height: 750px;
+
+  object-fit: cover;
+  display: block;
+
+  border-radius: 20px;
+  border: 10px solid #e1bee7;
+
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+  /* 🔥 más profundidad */
+}
+
+/* ===== CONTENEDOR ===== */
+.foto-separador2 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  padding: 20px 0;
+
+  /* 🔥 FONDO */
+  background-image: url("img/portada.jpeg");
+  background-size: cover;
+  background-position: center;
+
+  height: auto !important;
+  /* 🔥 quita altura fija */
+  overflow: visible;
+  /* 🔥 evita recorte */
+}
+
+/* ===== IMAGEN ===== */
+.foto-separador2 img {
+  width: 60%;
+  /* 🔥 aquí la haces más chica */
+  height: auto;
+  /* 🔥 mantiene proporción REAL */
+
+  display: block;
+
+  border-radius: 20px;
+  border: 10px solid #e1bee7;
+
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+h1 {
+  font-family: 'EB Garamond', serif;
+  font-size: 60px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 20px;
+  max-width: 600px;
+}
+
+/* IMÁGENES */
+.portada {
+  background-image: url("img/portada.jpeg");
+}
+
+.padres {
+  background-image: url("img/portada.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: auto;
+  padding: 70px 20px;
+  text-align: center;
+  position: relative;
+}
+
+.padres h2 {
+  font-family: 'Parisienne', cursive;
+  font-size: 100px;
+  /* opcional para que luzca más elegante */
+  color: #6532C4;
+  margin: 0;
+  /* 🔥 quita espacio externo */
+  line-height: 1;
+  /* 🔥 quita espacio invisible */
+}
+
+/* NOMBRES */
+.padres p {
+  font-family: 'EB Garamond', serif;
+  font-size: 30px;
+  /* opcional */
+}
+
+.padrinos {
+  background-image: url("img/portada.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 70px 20px;
+  min-height: auto !important;
+  /* 🔥 rompe el 100vh */
+  height: 450px;
+  /* 🔥 tú decides qué tan chica */
+}
+
+.padrinos h2 {
+  font-family: 'Parisienne', cursive;
+  font-size: 100px;
+  /* opcional para que luzca más elegante */
+  color: #6532C4;
+  margin: 0;
+  /* 🔥 quita espacio externo */
+  line-height: 1;
+  /* 🔥 quita espacio invisible */
+}
+
+/* NOMBRES */
+.padrinos p {
+  font-family: 'EB Garamond', serif;
+  font-size: 30px;
+  /* opcional */
+}
+
+.decoracionpadrinos {
+  width: 350px;
+  /* 🔥 370px es enorme, por eso se ve raro */
+  height: auto;
+  display: block;
+  margin: 5px auto 10px;
+  /* 🔥 centrado y controlado */
+}
+
+.mensaje {
+  background-color: #e1cbf6;
+
+  font-family: 'EB Garamond', serif;
+  line-height: 2.6;
+
+  margin: 0;
+  padding: 60px 20px;
+
+  min-height: auto !important;
+
+  color: #000;
+}
+
+.mensaje p {
+  font-size: 27px;
+  /* 🔥 ahora sí aplica */
+  line-height: 1.6;
+  /* 🔥 baja esto, 2.6 es enorme */
+}
+
+.separador {
+  background-image: url("img/portada.jpeg");
+  background-size: cover;
+  background-position: center;
+
+  min-height: auto !important;
+  /* 🔥 rompe el 100vh */
+  height: 200px;
+  /* 🔥 tú decides qué tan chica */
+}
+
+/* IZQUIERDA */
+.animar-izq {
+  opacity: 0;
+  transform: translateX(-80px);
+  transition: all 3.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* DERECHA */
+.animar-der {
+  opacity: 0;
+  transform: translateX(80px);
+  transition: all 3.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* CUANDO APARECEN */
+.animar-izq.visible,
+.animar-der.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ===== GRID 2x2 ===== */
+.evento-grid {
+  display: grid !important;
+  /* 🔥 esto es CLAVE */
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  gap: 0.1px;
+  /* 🔥 ESTO SEPARA TODO */
+  align-items: stretch;
+  /* 🔥 que ambas columnas se alineen */
+
+  min-height: auto !important;
+
+  justify-content: initial !important;
+  align-items: initial !important;
+}
+
+section.evento-grid {
+  display: grid !important;
+}
+
+/* 🔥 quitar efecto global de section */
+.evento-grid>div,
+.evento-grid .misa,
+.evento-grid .recepcion {
+  min-height: auto !important;
+  height: auto !important;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== IMÁGENES ===== */
+.evento-grid .imagen {
+  width: 100%;
+  border: 10px solid #e1bee7;
+  box-sizing: border-box;
+}
+
+.evento-grid .imagen img {
+  width: 100%;
+  height: auto;
+  /* 🔥 imagen manda */
+  display: block;
+}
+
+/* ===== TEXTO ===== */
+.misa,
+.recepcion {
+  background-image: url("img/portada.jpeg");
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 17px 12px;
+  /* 🔥 menos espacio general */
+  text-align: center;
+}
+
+/* ===== TITULOS ===== */
+.misa h2,
+.recepcion h2 {
+  font-family: 'Parisienne', cursive;
+  font-size: 55px;
+  color: #6532C4;
+  line-height: 3.25;
+  /* 🔥 reduce el espacio fantasma */
+  margin: 0 0 10px 0;
+  /* 🔥 solo deja espacio abajo */
+}
+
+/* ===== TEXTO ===== */
+.misa p,
+.recepcion p {
+  font-family: 'EB Garamond', serif;
+  font-size: 30px;
+
+  margin: 8px 0;
+  /* 🔥 compacto */
+  line-height: 3;
+}
+
+/* ===== BOTONES ===== */
+.misa a {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 6px 12px;
+  font-family: 'EB Garamond', serif;
+  font-size: 16px;
+  border: 0.5px solid #8c49ff;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #4b4b4b;
+  background: rgb(234, 219, 255);
+  transition: all 0.3s ease;
+  margin-bottom: 14px;
+}
+
+.recepcion a {
+  display: inline-block;
+  margin-top: 23px;
+  padding: 6px 12px;
+  font-family: 'EB Garamond', serif;
+  font-size: 20px;
+  border: 0.5px solid #8c49ff;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #4b4b4b;
+  background: rgb(234, 219, 255);
+  transition: all 0.3s ease;
+  margin-bottom: 39px;
+}
+
+/* ===== HOVER ===== */
+.misa a:hover,
+.recepcion a:hover {
+  background: #6532C4;
+  color: white;
+  border-color: #6532C4;
+  transform: scale(1.05);
+}
+
+.vestimenta {
+  background-image: url("img/portada.jpeg");
+  background-size: cover;
+  background-position: center;
+
+  min-height: auto !important;
+  /* 🔥 rompe el 100vh */
+  height: 700px;
+  /* 🔥 tú decides qué tan chica */
+
+  padding: 70px 20px;
+}
+
+.monvestido {
+  background-image: url("img/portada.jpeg");
+  background-size: cover;
+  background-position: center;
+
+  height: 700px;
+  min-height: auto !important;
+
+  padding: 0 0 120px 0;
+  /* 🔥 quitamos laterales */
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.foto-vestimenta {
+  width: 360px;
+  height: auto;
+
+  display: block;
+  margin: 0 auto;
+  /* 🔥 esto la centra sí o sí */
+
+  border-radius: 20px;
+  border: 10px solid #e1bee7;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.vestimenta h2 {
+  font-family: 'Parisienne', cursive;
+  font-size: 55px;
+  color: #6532C4;
+  margin: 0;
+  /* 🔥 quita espacio externo */
+  line-height: 1;
+  /* 🔥 quita espacio invisible */
+
+}
+
+.vestimenta p {
+  font-family: 'eb garamond', serif;
+  font-size: 25px;
+  /* opcional para que luzca más elegante */
+  color: #000000;
+  margin: 0;
+  /* 🔥 quita espacio externo */
+  line-height: 1.5;
+  /* 🔥 quita espacio invisible */
+  margin-bottom: 34px;
+}
+
+/* ===== ICONOS VESTIMENTA ===== */
+.iconos-vestimenta {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  /* 🔥 espacio entre iconos */
+  margin: 20px 0;
+}
+
+/* ICONOS INDIVIDUALES */
+.icono-v {
+  width: 100px;
+  /* 🔥 tamaño */
+  height: auto;
+
+  display: block;
+
+  transition: transform 0.3s ease;
+}
+
+/* HOVER BONITO */
+.icono-v:hover {
+  transform: scale(1.1);
+}
+
+/* ===== SECCIÓN REGALOS ===== */
+.regalos {
+  background-image: url("img/portada.jpeg");
+  background-size: cover;
+  background-position: center;
+
+  min-height: auto !important;
+  /* 🔥 evita que sea gigante */
+  padding: 60px 20px;
+  text-align: center;
+}
+
+/* TITULO */
+.regalos h2 {
+  font-family: 'Parisienne', cursive;
+  font-size: 50px;
+  color: #6532C4;
+
+  margin: 0;
+  line-height: 1;
+}
+
+.icono-regalo {
+  width: 70px;
+  height: auto;
+
+  display: block;
+  margin: 20px auto;
+
+  transition: transform 0.3s ease;
+}
+
+.icono-regalo:hover {
+  transform: scale(1.1);
+}
+
+/* TEXTO */
+.regalos p {
+  font-family: 'EB Garamond', serif;
+  font-size: 28px;
+
+  margin: 15px 0;
+  line-height: 1.6;
+}
+
+/* BOTÓN */
+.regalos a {
+  display: inline-block;
+
+  margin-top: 20px;
+  padding: 10px 20px;
+
+  font-family: 'EB Garamond', serif;
+  font-size: 18px;
+
+  border: 1px solid #8c49ff;
+  border-radius: 12px;
+
+  text-decoration: none;
+  /* 🔥 quita subrayado */
+  color: #4b4b4b;
+
+  background: #eadbff;
+
+  transition: all 0.3s ease;
+}
+
+/* HOVER */
+.regalos a:hover {
+  background: #6532C4;
+  color: white;
+  border-color: #6532C4;
+  transform: scale(1.05);
+}
+
+a {
+  font-family: 'eb garamond', serif;
+  margin-top: 20px;
+  padding: 12px 25px;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+  background: white;
+  color: #6a4fb3;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  background: #6532C4;
+  color: white;
+  border-color: #6532C4;
+  transform: scale(1.05);
+}
+
+/* ===== CONTADOR ===== */
+.contador {
+  background-color: #e1cbf6;
+  text-align: center;
+
+  min-height: auto !important;
+  /* 🔥 rompe el 100vh */
+  padding: 100px;
+  /* 🔥 controla altura real */
+  inline-size: 25px;
+  width: 86.3%;
+  margin: 0;
+}
+
+/* TITULO */
+.contador h2 {
+  font-family: 'Parisienne', cursive;
+  font-size: 50px;
+  color: #6532C4;
+  margin-top: 0px;
+  margin-bottom: 80px;
+  line-height: 0;
+  /* 🔥 CLAVE: quita espacio invisible */
+}
+
+/* CONTENEDOR */
+.reloj-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+/* TARJETAS */
+.time-card {
+  text-align: center;
+}
+
+/* NÚMEROS */
+.time-num {
+  font-family: 'Times New Roman', serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+
+  background: white;
+  color: #4a1d9e;
+
+  padding: 8px 16px;
+  border-radius: 12px;
+
+  display: inline-block;
+  min-width: 70px;
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+  /* 🔥 CLAVE PARA ANIMACIÓN */
+  perspective: 1000px;
+  transform-origin: center;
+}
+
+/* LABEL */
+.time-label {
+  font-family: 'EB Garamond', serif;
+  font-size: 33px;
+  font-weight: 600;
+  letter-spacing: 1px;
+
+  color: #5a2eb3;
+
+  background: rgba(255, 255, 255, 0.6);
+  padding: 3px 10px;
+  border-radius: 10px;
+
+  display: inline-block;
+  margin-top: 5px;
+}
+
+/* ===== ANIMACIÓN FLIP REAL ===== */
+.time-num.flip {
+  animation: flipUp 0.6s ease;
+}
+
+@keyframes flipUp {
+  0% {
+    transform: rotateX(0deg);
+  }
+
+  50% {
+    transform: rotateX(-90deg);
+  }
+
+  100% {
+    transform: rotateX(0deg);
+  }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 550px) {
+  .time-num {
+    font-size: 1.8rem;
+    min-width: 55px;
+    padding: 6px 10px;
+  }
+
+  .time-label {
+    font-size: 0.7rem;
+  }
+
+  .contador h2 {
+    font-size: 22px;
+  }
+
+  .reloj-wrapper {
+    gap: 10px;
+  }
+}
+
+/* ===== SECCIÓN ===== */
+.foto4 {
+  background-image: url("img/portada.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  height: 700px;
+
+  display: flex !important;
+  /* 🔥 fuerza flex */
+  justify-content: center !important;
+  /* 🔥 centra horizontal */
+  align-items: flex-start !important;
+  /* 🔥 pegada arriba */
+
+  margin: 0;
+}
+
+/* ===== IMAGEN ===== */
+.foto4-img {
+  width: 580px;
+  height: auto;
+
+  display: block;
+  margin: 0 auto;
+  /* 🔥 doble seguro de centrado */
+
+  border-radius: 20px;
+  border: 10px solid #e1bee7;
+  box-sizing: border-box;
+
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+/* ===== ANIMACIÓN BASE ===== */
+.animar {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1.2s ease;
+  /* 🔥 más suave */
+}
+
+/* ===== CUANDO APARECE ===== */
+.animar.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* CONFIRMACION */
+.confirmacion {
+  background-image: url(img/portada.jpeg);
+}
+
+.confirmacion h2 {
+  font-family: 'parisienne', cursive;
+  font-size: 60px;
+  color: #6532C4;
+}
+
+.confirmacion p {
+  font-family: 'eb garamond', serif;
+  font-size: 25px;
+  color: #000000;
+}
+
+.confirmacion input {
+  font-family: 'eb garamond', serif;
+  color: #000;
+  padding: 12px;
+  font-size: 18px;
+  width: 120px;
+  text-align: center;
+  border-radius: 10px;
+  border: none;
+  margin-top: 10px;
+}
+
+.confirmacion button {
+  font-family: 'eb garamond', serif;
+  margin-top: 20px;
+  padding: 12px 25px;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+  background: white;
+  color: #6532C4;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.confirmacion button:hover {
+  background: #6532C4;
+  color: white;
+  border-color: #6532C4;
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
+
+.confirmacion img {
+  width: 250px;
+  margin: 20px 0;
+  border-radius: 10px;
+}
+
+h3 {
+  font-family: 'parisienne', cursive;
+  font-size: 40px;
+  color: #6532C4;
+}
+/* ============================================================
+   AJUSTES PARA MÓVILES (EFECTO ESCALA Y CORRECCIONES)
+   ============================================================ */
+
+@media (max-width: 768px) {
+    /* 1. Ajuste de Fuentes Generales */
+    h1 { font-size: 40px !important; }
+    h2 { font-size: 35px !important; }
+    p { font-size: 18px !important; width: 90%; margin: 0 auto; }
+    
+    /* 2. Arreglo del Grid 2x2 (Misa y Recepción) */
+    .evento-grid {
+        display: flex !important;
+        flex-direction: column !important; /* Apila uno arriba de otro */
+    }
+
+    .evento-grid .imagen {
+        border: 5px solid #e1bee7; /* Marco más delgado para celular */
+        height: 250px !important; /* Altura fija para que no se vea gigante */
+        overflow: hidden;
+    }
+
+    .evento-grid .imagen img {
+        width: 100%;
+        height: 100% !important;
+        object-fit: cover !important; /* 🔥 ESTO QUITA LOS HUECOS BLANCOS */
+    }
+
+    /* 3. Ajuste de imágenes decorativas y marcos */
+    .decoracionpadrinos {
+        width: 80% !important; /* Se ajusta al ancho del celular */
+    }
+
+    .foto-separador img, 
+    .foto-separador2 img, 
+    .foto-vestimenta, 
+    .foto4-img {
+        width: 90% !important; /* Casi todo el ancho del celular */
+        max-width: none !important;
+        height: auto !important;
+        border-width: 6px !important; /* Marco más proporcional */
+    }
+
+    /* 4. Botones más fáciles de tocar */
+    #abrir, .misa a, .recepcion a, .regalos a, .confirmacion button {
+        width: 80% !important;
+        padding: 15px !important;
+        font-size: 20px !important;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* 5. Ajuste de Secciones */
+    section {
+        min-height: auto !important;
+        padding: 40px 10px !important;
+    }
+
+    .portada-central {
+        width: 85% !important;
+    }
+
+    /* 6. Contador (Reloj) */
+    .time-num {
+        font-size: 1.5rem !important;
+        min-width: 50px !important;
+        padding: 10px !important;
+    }
+    
+    .time-label {
+        font-size: 14px !important;
+    }
+
+    /* Ajuste específico para padres/padrinos */
+    .padres h2, .padrinos h2 {
+        font-size: 60px !important;
+    }
+}
