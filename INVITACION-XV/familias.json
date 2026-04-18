@@ -1,0 +1,257 @@
+[
+  {
+    "id_familia": 1,
+    "nombre_familia": "Familia Uribe Colin",
+    "boletos": 4
+  },
+  {
+    "id_familia": 2,
+    "nombre_familia": "Familia Uribe Román",
+    "boletos": 4
+  },
+  {
+    "id_familia": 3,
+    "nombre_familia": "Familia Mondragon Uribe",
+    "boletos": 7
+  },
+  {
+    "id_familia": 4,
+    "nombre_familia": "Familia Tabares Sanchez",
+    "boletos": 3
+  },
+  {
+    "id_familia": 5,
+    "nombre_familia": "Familia Sánchez Pérez",
+    "boletos": 4
+  },
+  {
+    "id_familia": 6,
+    "nombre_familia": "Familia Uribe Monroy",
+    "boletos": 1
+  },
+  {
+    "id_familia": 7,
+    "nombre_familia": "Familia Uribe Monroy",
+    "boletos": 2
+  },
+  {
+    "id_familia": 8,
+    "nombre_familia": "Familia Uribe Contreras",
+    "boletos": 5
+  },
+  {
+    "id_familia": 9,
+    "nombre_familia": "Familia Uribe Oliva",
+    "boletos": 2
+  },
+  {
+    "id_familia": 10,
+    "nombre_familia": "Familia Colin Diaz",
+    "boletos": 3
+  },
+  {
+    "id_familia": 11,
+    "nombre_familia": "Familia Díaz Deras",
+    "boletos": 5
+  },
+  {
+    "id_familia": 12,
+    "nombre_familia": "Familia Gutiérrez Díaz",
+    "boletos": 4
+  },
+  {
+    "id_familia": 13,
+    "nombre_familia": "Familia Gutiérrez Espinoza",
+    "boletos": 2
+  },
+  {
+    "id_familia": 14,
+    "nombre_familia": "Familia Gutiérrez, Zayas",
+    "boletos": 5
+  },
+  {
+    "id_familia": 15,
+    "nombre_familia": "Familia Díaz Peralta",
+    "boletos": 4
+  },
+  {
+    "id_familia": 16,
+    "nombre_familia": "Familia Ortega Díaz-Martínez",
+    "boletos": 8
+  },
+  {
+    "id_familia": 17,
+    "nombre_familia": "Familia García Gutiérrez",
+    "boletos": 4
+  },
+  {
+    "id_familia": 18,
+    "nombre_familia": "Familia Ortega Gutiérrez",
+    "boletos": 4
+  },
+  {
+    "id_familia": 19,
+    "nombre_familia": "Familia Gutiérrez Gómez",
+    "boletos": 2
+  },
+  {
+    "id_familia": 21,
+    "nombre_familia": "Familia Sánchez",
+    "boletos": 3
+  },
+  {
+    "id_familia": 22,
+    "nombre_familia": "Familia Monroy Anaya",
+    "boletos": 2
+  },
+  {
+    "id_familia": 23,
+    "nombre_familia": "Familia Monroy Anaya",
+    "boletos": 2
+  },
+  {
+    "id_familia": 24,
+    "nombre_familia": "Familia Monroy Anaya",
+    "boletos": 4
+  },
+  {
+    "id_familia": 25,
+    "nombre_familia": "Familia Monroy Anaya",
+    "boletos": 3
+  },
+  {
+    "id_familia": 26,
+    "nombre_familia": "Familia Monroy Lara",
+    "boletos": 3
+  },
+  {
+    "id_familia": 27,
+    "nombre_familia": "Familia Ponce de León Monroy",
+    "boletos": 4
+  },
+  {
+    "id_familia": 28,
+    "nombre_familia": "Familia Ponce de León Monroy",
+    "boletos": 3
+  },
+  {
+    "id_familia": 29,
+    "nombre_familia": "Familia Monroy Lara",
+    "boletos": 6
+  },
+  {
+    "id_familia": 30,
+    "nombre_familia": "Familia Martínez Ortiz",
+    "boletos": 3
+  },
+  {
+    "id_familia": 31,
+    "nombre_familia": "Familia Gallegos Gutiérrez",
+    "boletos": 4
+  },
+  {
+    "id_familia": 32,
+    "nombre_familia": "Familia Tapia Gallegos",
+    "boletos": 4
+  },
+  {
+    "id_familia": 33,
+    "nombre_familia": "Familia Gutiérrez Campos",
+    "boletos": 4
+  },
+  {
+    "id_familia": 34,
+    "nombre_familia": "Familia Gutiérrez Rodríguez",
+    "boletos": 3
+  },
+  {
+    "id_familia": 35,
+    "nombre_familia": "familia Ortiz Rodríguez",
+    "boletos": 3
+  },
+  {
+    "id_familia": 36,
+    "nombre_familia": "Familia Ortiz Rodríguez",
+    "boletos": 3
+  },
+  {
+    "id_familia": 37,
+    "nombre_familia": "Familia Ortiz Rodríguez",
+    "boletos": 4
+  },
+  {
+    "id_familia": 38,
+    "nombre_familia": "Familia Peñaloza",
+    "boletos": 2
+  },
+  {
+    "id_familia": 39,
+    "nombre_familia": "Familia Ortega Díaz",
+    "boletos": 4
+  },
+  {
+    "id_familia": 40,
+    "nombre_familia": "Familia de cristian",
+    "boletos": 3
+  },
+  {
+    "id_familia": 41,
+    "nombre_familia": "Familia Mancilla",
+    "boletos": 3
+  },
+  {
+    "id_familia": 42,
+    "nombre_familia": "Familia Jiménez Martínez de Velasco",
+    "boletos": 2
+  },
+  {
+    "id_familia": 43,
+    "nombre_familia": "Familia Martínez, Amezcua",
+    "boletos": 3
+  },
+  {
+    "id_familia": 44,
+    "nombre_familia": "Fernando y Ángel",
+    "boletos": 2
+  },
+  {
+    "id_familia": 45,
+    "nombre_familia": "Itzel Martínez García",
+    "boletos": 1
+  },
+  {
+    "id_familia": 46,
+    "nombre_familia": "Aitana rodea Ramírez",
+    "boletos": 1
+  },
+  {
+    "id_familia": 47,
+    "nombre_familia": "Ana, Brenda Hernández Hernández",
+    "boletos": 1
+  },
+  {
+    "id_familia": 48,
+    "nombre_familia": "Camila González Hernández",
+    "boletos": 1
+  },
+  {
+    "id_familia": 49,
+    "nombre_familia": "Santiago Ramos Sotelo",
+    "boletos": 1
+  },
+  {
+    "id_familia": 50,
+    "nombre_familia": "Alejandro, Valencia, barba",
+    "boletos": 1
+  },
+  {
+    "id_familia": 51,
+    "nombre_familia": "Azul Morales, Esquivel",
+    "boletos": 1
+  },
+  {
+    "id_familia": 52,
+    "nombre_familia": "Ashley",
+    "boletos": 1
+  }
+]
