@@ -911,81 +911,117 @@ h3 {
   color: #6532C4;
 }
 /* ============================================================
-   AJUSTES PARA MÓVILES (EFECTO ESCALA Y CORRECCIONES)
+   AJUSTES FINALES RESPONSIVOS (CELULAR)
    ============================================================ */
-
 @media (max-width: 768px) {
-    /* 1. Ajuste de Fuentes Generales */
-    h1 { font-size: 40px !important; }
-    h2 { font-size: 35px !important; }
-    p { font-size: 18px !important; width: 90%; margin: 0 auto; }
-    
-    /* 2. Arreglo del Grid 2x2 (Misa y Recepción) */
-    .evento-grid {
-        display: flex !important;
-        flex-direction: column !important; /* Apila uno arriba de otro */
+    /* --- CORRECCIÓN DE DESBORDE (Línea blanca lateral) --- */
+    html, body {
+        overflow-x: hidden; /* Evita el scroll lateral */
+        width: 100%;
+        margin: 0;
+        padding: 0;
     }
 
-    .evento-grid .imagen {
-        border: 5px solid #e1bee7; /* Marco más delgado para celular */
-        height: 250px !important; /* Altura fija para que no se vea gigante */
+    section {
+        width: 100%;
+        box-sizing: border-box;
+        min-height: auto !important;
+        padding: 30px 15px !important; /* Reduce espacios blancos globales */
+    }
+
+    /* --- OVERLAY (PRE-PORTADA) --- */
+    .logo-overlay {
+        width: 85% !important; /* Logo más grande */
+    }
+    .fecha {
+        gap: 8px;
+    }
+    .linea {
+        width: 30px !important; /* Líneas laterales más chicas */
+    }
+    .texto-fecha {
+        font-size: 20px !important; /* Fecha en una sola línea */
+        white-space: nowrap;
+    }
+    #abrir {
+        padding: 10px 20px !important;
+        font-size: 16px !important; /* Botón más pequeño */
+    }
+
+    /* --- CONTENIDO GENERAL --- */
+    .portada-central {
+        width: 95% !important; /* Portada más grande */
+    }
+    .frase {
+        font-size: 24px !important; /* Texto "Hace 15 años..." más grande */
+        width: 95% !important;
+    }
+    .padres p, .padrinos p, .mensaje p, .regalos p, .confirmacion p {
+        font-size: 26px !important; /* P's más grandes como pediste */
+        margin: 10px 0 !important;
+    }
+    h2 {
+        font-size: 45px !important; /* H2 más grandes */
+    }
+
+    /* --- CORRECCIÓN FOTO 1 Y 2 (Desborde) --- */
+    .foto-separador, .foto-separador2 {
+        width: 100% !important;
+        padding: 10px 0 !important;
         overflow: hidden;
     }
-
-    .evento-grid .imagen img {
-        width: 100%;
-        height: 100% !important;
-        object-fit: cover !important; /* 🔥 ESTO QUITA LOS HUECOS BLANCOS */
+    .foto-separador img, .foto-separador2 img {
+        width: 90% !important;
+        max-width: 100%;
     }
 
-    /* 3. Ajuste de imágenes decorativas y marcos */
-    .decoracionpadrinos {
-        width: 80% !important; /* Se ajusta al ancho del celular */
+    /* --- SECCIÓN EVENTO (GRID) --- */
+    .separador {
+        display: none; /* Eliminamos la sección que dejaba el espacio blanco invisible */
+    }
+    .evento-grid {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
+    .misa h2, .recepcion h2 {
+        font-size: 40px !important;
+        line-height: 1.2 !important; /* Menos espacio entre textos */
+    }
+    .misa p, .recepcion p {
+        font-size: 22px !important;
+        line-height: 1.2 !important;
+        margin: 5px 0 !important;
+    }
+    .misa a, .recepcion a {
+        padding: 8px 15px !important;
+        font-size: 16px !important; /* Botones más pequeños */
+        margin-top: 10px !important;
     }
 
-    .foto-separador img, 
-    .foto-separador2 img, 
-    .foto-vestimenta, 
-    .foto4-img {
-        width: 90% !important; /* Casi todo el ancho del celular */
-        max-width: none !important;
+    /* --- CÓDIGO DE VESTIMENTA --- */
+    .vestimenta {
+        padding-top: 10px !important; /* H2 más pegado al inicio */
         height: auto !important;
-        border-width: 6px !important; /* Marco más proporcional */
+        margin-bottom: 10px !important; /* Margen bottom más pequeño */
+    }
+    .vestimenta h2 {
+        font-size: 48px !important;
     }
 
-    /* 4. Botones más fáciles de tocar */
-    #abrir, .misa a, .recepcion a, .regalos a, .confirmacion button {
-        width: 80% !important;
-        padding: 15px !important;
-        font-size: 20px !important;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    /* 5. Ajuste de Secciones */
-    section {
-        min-height: auto !important;
+    /* --- CONTADOR --- */
+    .contador {
+        width: 100% !important; /* Cuadra con el resto de la página */
         padding: 40px 10px !important;
+        margin: 0 !important;
+        box-sizing: border-box;
     }
 
-    .portada-central {
-        width: 85% !important;
+    /* --- CONFIRMACIÓN --- */
+    .confirmacion h2 {
+        font-size: 50px !important;
     }
-
-    /* 6. Contador (Reloj) */
-    .time-num {
-        font-size: 1.5rem !important;
-        min-width: 50px !important;
-        padding: 10px !important;
-    }
-    
-    .time-label {
-        font-size: 14px !important;
-    }
-
-    /* Ajuste específico para padres/padrinos */
-    .padres h2, .padrinos h2 {
-        font-size: 60px !important;
+    #confirmados {
+        width: 80px !important;
+        font-size: 22px !important;
     }
 }
