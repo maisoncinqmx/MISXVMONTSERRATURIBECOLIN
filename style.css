@@ -1,0 +1,308 @@
+/* ===== RESET BASE ===== */
+*{
+  box-sizing: border-box;
+}
+
+html, body{
+  margin:0;
+  padding:0;
+  overflow-x:hidden;
+  font-family: Arial, sans-serif;
+  text-align:center;
+  color:rgba(7, 7, 7, 0.941);
+}
+
+/* ===== SECCIONES ===== */
+section{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  padding:40px 20px;
+  background-size:cover;
+  background-position:center;
+  background-attachment:fixed;
+}
+
+/* ===== ANIMACIONES ===== */
+.animar{
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1.2s ease;
+}
+
+.animar.visible{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.animar-izq{
+  opacity:0;
+  transform: translateX(-80px);
+  transition: all 1.2s ease;
+}
+
+.animar-der{
+  opacity:0;
+  transform: translateX(80px);
+  transition: all 1.2s ease;
+}
+
+.animar-izq.visible,
+.animar-der.visible{
+  opacity:1;
+  transform: translateX(0);
+}
+
+/* ===== PORTADA ===== */
+.portada{
+  background-image:url("img/portada.jpeg");
+}
+
+.portada-central{
+  width:90%;
+  max-width:600px;
+  display:block;
+  margin:0 auto;
+}
+
+.frase{
+  font-size:22px;
+  max-width:600px;
+  line-height:1.6;
+}
+
+/* ===== LINEA ===== */
+.linea{
+  width:20%;
+  max-width:100px;
+  height:3px;
+  background:#d4af37;
+  border-radius:5px;
+}
+
+/* ===== FOTOS ===== */
+.foto-separador,
+.foto-separador2{
+  width:100%;
+  display:flex;
+  justify-content:center;
+  background-image:url("img/portada.jpeg");
+}
+
+.foto-separador img,
+.foto-separador2 img{
+  width:90%;
+  max-width:700px;
+  border-radius:20px;
+  border:10px solid #e1bee7;
+}
+
+/* ===== PADRES / PADRINOS ===== */
+.padres, .padrinos{
+  background-image:url("img/portada.jpeg");
+}
+
+.padres h2, .padrinos h2{
+  font-family:'Parisienne', cursive;
+  font-size:60px;
+  color:#6532C4;
+}
+
+.padres p, .padrinos p{
+  font-size:24px;
+}
+
+/* ===== MENSAJE ===== */
+.mensaje{
+  background:#e1cbf6;
+  padding:60px 20px;
+}
+
+.mensaje p{
+  font-size:22px;
+}
+
+/* ===== GRID EVENTO ===== */
+.evento-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  width:100%;
+}
+
+.evento-grid .imagen{
+  border:10px solid #e1bee7;
+}
+
+.evento-grid .imagen img{
+  width:100%;
+}
+
+.misa, .recepcion{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  background-image:url("img/portada.jpeg");
+  padding:20px;
+}
+
+.misa h2, .recepcion h2{
+  font-size:40px;
+  color:#6532C4;
+}
+
+.misa p, .recepcion p{
+  font-size:22px;
+}
+
+/* ===== VESTIMENTA ===== */
+.vestimenta{
+  background-image:url("img/portada.jpeg");
+}
+
+.iconos-vestimenta{
+  display:flex;
+  justify-content:center;
+  gap:30px;
+}
+
+.icono-v{
+  width:90px;
+  transition:transform 0.3s;
+}
+
+.icono-v:hover{
+  transform:scale(1.1);
+}
+
+/* ===== FOTO VESTIDO ===== */
+.monvestido{
+  background-image:url("img/portada.jpeg");
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+}
+
+.foto-vestimenta{
+  width:90%;
+  max-width:400px;
+  border-radius:20px;
+  border:10px solid #e1bee7;
+}
+
+/* ===== REGALOS ===== */
+.regalos{
+  background-image:url("img/portada.jpeg");
+}
+
+.icono-regalo{
+  width:70px;
+}
+
+.regalos p{
+  font-size:22px;
+}
+
+/* ===== CONTADOR ===== */
+.contador{
+  background:#e1cbf6;
+  width:100%;
+  padding:60px 20px;
+}
+
+.reloj-wrapper{
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+.time-num{
+  font-size:2rem;
+  background:white;
+  padding:10px;
+  border-radius:10px;
+}
+
+/* ===== FOTO 4 ===== */
+.foto4{
+  background-image:url("img/portada.jpeg");
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+}
+
+.foto4-img{
+  width:90%;
+  max-width:500px;
+  border-radius:20px;
+  border:10px solid #e1bee7;
+}
+
+/* ===== CONFIRMACION ===== */
+.confirmacion{
+  background-image:url("img/portada.jpeg");
+}
+
+.confirmacion input{
+  padding:10px;
+  border-radius:10px;
+}
+
+/* ===== OVERLAY ===== */
+#overlay{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background-image:url("img/portada.jpeg");
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  z-index:9999;
+  transition:transform 1s ease;
+}
+
+#overlay.ocultar{
+  transform:translateY(-100%);
+}
+
+/* ===== BOTON MUSICA ===== */
+#toggleMusica{
+  position:fixed;
+  top:20px;
+  left:20px;
+  z-index:9999;
+}
+
+/* ===== 📱 RESPONSIVE ===== */
+@media (max-width:768px){
+
+  section{
+    background-attachment:scroll;
+  }
+
+  h2{
+    font-size:28px !important;
+  }
+
+  p{
+    font-size:18px !important;
+  }
+
+  .evento-grid{
+    grid-template-columns:1fr;
+  }
+
+  .icono-v{
+    width:60px;
+  }
+
+  .icono-regalo{
+    width:55px;
+  }
+
+}
