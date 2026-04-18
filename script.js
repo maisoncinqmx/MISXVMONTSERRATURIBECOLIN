@@ -62,16 +62,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // ABRIR INVITACIÓN
   btn.addEventListener("click", () => {
-    console.log("CLICK detectado");
-
     musica.volume = 0.3;
-
     musica.play().catch(error => {
       console.log("Error al reproducir:", error);
     });
-
     overlay.classList.add("ocultar");
-
     reproduciendo = true;
     toggle.innerText = "🔊";
   });
@@ -88,135 +83,115 @@ document.addEventListener("DOMContentLoaded", () => {
       reproduciendo = true;
     }
   });
-
 });
 
 // LISTA DE FAMILIAS
-
 const familias = [
-
-{ id_familia:1, nombre_familia:"Familia Uribe Colin", boletos:4 },
-{ id_familia:2, nombre_familia:"Familia Uribe Román", boletos:4 },
-{ id_familia:3, nombre_familia:"Familia Mondragon Uribe", boletos:7 },
-{ id_familia:4, nombre_familia:"Familia Tabares Sanchez", boletos:3 },
-{ id_familia:5, nombre_familia:"Familia Sánchez Pérez", boletos:4 },
-{ id_familia:6, nombre_familia:"Familia Uribe Monroy", boletos:1 },
-{ id_familia:7, nombre_familia:"Familia Uribe Monroy", boletos:2 },
-{ id_familia:8, nombre_familia:"Familia Uribe Contreras", boletos:5 },
-{ id_familia:9, nombre_familia:"Familia Uribe Oliva", boletos:2 },
-{ id_familia:10, nombre_familia:"Familia Colin Diaz", boletos:3 },
-{ id_familia:11, nombre_familia:"Familia Díaz Deras", boletos:5 },
-{ id_familia:12, nombre_familia:"Familia Gutiérrez Díaz", boletos:4 },
-{ id_familia:13, nombre_familia:"Familia Gutiérrez Espinoza", boletos:2 },
-{ id_familia:14, nombre_familia:"Familia Gutiérrez Zayas", boletos:5 },
-{ id_familia:15, nombre_familia:"Familia Díaz Peralta", boletos:4 },
-{ id_familia:16, nombre_familia:"Familia Ortega Díaz-Martínez", boletos:8 },
-{ id_familia:17, nombre_familia:"Familia García Gutiérrez", boletos:4 },
-{ id_familia:18, nombre_familia:"Familia Ortega Gutiérrez", boletos:4 },
-{ id_familia:19, nombre_familia:"Familia Gutiérrez Gómez", boletos:2 },
-{ id_familia:20, nombre_familia:"Familia Sánchez", boletos:3 },
-{ id_familia:21, nombre_familia:"Familia Monroy Anaya", boletos:2 },
-{ id_familia:22, nombre_familia:"Familia Monroy Anaya", boletos:2 },
-{ id_familia:23, nombre_familia:"Familia Monroy Anaya", boletos:4 },
-{ id_familia:24, nombre_familia:"Familia Monroy Anaya", boletos:3 },
-{ id_familia:25, nombre_familia:"Familia Monroy Lara", boletos:3 },
-{ id_familia:26, nombre_familia:"Familia Ponce de León Monroy", boletos:4 },
-{ id_familia:27, nombre_familia:"Familia Ponce de León Monroy", boletos:3 },
-{ id_familia:28, nombre_familia:"Familia Monroy Lara", boletos:6 },
-{ id_familia:29, nombre_familia:"Familia Martínez Ortiz", boletos:3 },
-{ id_familia:30, nombre_familia:"Familia Gallegos Gutiérrez", boletos:4 },
-{ id_familia:31, nombre_familia:"Familia Tapia Gallegos", boletos:4 },
-{ id_familia:32, nombre_familia:"Familia Gutiérrez Campos", boletos:4 },
-{ id_familia:33, nombre_familia:"Familia Gutiérrez Rodríguez", boletos:3 },
-{ id_familia:34, nombre_familia:"Familia Ortiz Rodríguez", boletos:3 },
-{ id_familia:35, nombre_familia:"Familia Ortiz Rodríguez", boletos:3 },
-{ id_familia:36, nombre_familia:"Familia Ortiz Rodríguez", boletos:4 },
-{ id_familia:37, nombre_familia:"Familia Peñaloza", boletos:2 },
-{ id_familia:38, nombre_familia:"Familia Ortega Díaz", boletos:4 },
-{ id_familia:39, nombre_familia:"Familia de Cristian", boletos:3 },
-{ id_familia:40, nombre_familia:"Familia Mancilla", boletos:3 },
-{ id_familia:41, nombre_familia:"Familia Jiménez Martínez de Velasco", boletos:2 },
-{ id_familia:42, nombre_familia:"Familia Martínez Amezcua", boletos:3 },
-{ id_familia:43, nombre_familia:"Fernando y Ángel", boletos:2 },
-{ id_familia:44, nombre_familia:"Itzel Martínez García", boletos:1 },
-{ id_familia:45, nombre_familia:"Aitana Rodea Ramírez", boletos:1 },
-{ id_familia:46, nombre_familia:"Ana y Brenda Hernández", boletos:1 },
-{ id_familia:47, nombre_familia:"Camila González Hernández", boletos:1 },
-{ id_familia:48, nombre_familia:"Santiago Ramos Sotelo", boletos:1 },
-{ id_familia:49, nombre_familia:"Alejandro Valencia Barba", boletos:1 },
-{ id_familia:50, nombre_familia:"Azul Morales Esquivel", boletos:1 },
-{ id_familia:51, nombre_familia:"Ashley", boletos:1 }
-
+    { id_familia:1, nombre_familia:"Familia Uribe Colin", boletos:4 },
+    { id_familia:2, nombre_familia:"Familia Uribe Román", boletos:4 },
+    { id_familia:3, nombre_familia:"Familia Mondragon Uribe", boletos:7 },
+    { id_familia:4, nombre_familia:"Familia Tabares Sanchez", boletos:3 },
+    { id_familia:5, nombre_familia:"Familia Sánchez Pérez", boletos:4 },
+    { id_familia:6, nombre_familia:"Familia Uribe Monroy", boletos:1 },
+    { id_familia:7, nombre_familia:"Familia Uribe Monroy", boletos:2 },
+    { id_familia:8, nombre_familia:"Familia Uribe Contreras", boletos:5 },
+    { id_familia:9, nombre_familia:"Familia Uribe Oliva", boletos:2 },
+    { id_familia:10, nombre_familia:"Familia Colin Diaz", boletos:3 },
+    { id_familia:11, nombre_familia:"Familia Díaz Deras", boletos:5 },
+    { id_familia:12, nombre_familia:"Familia Gutiérrez Díaz", boletos:4 },
+    { id_familia:13, nombre_familia:"Familia Gutiérrez Espinoza", boletos:2 },
+    { id_familia:14, nombre_familia:"Familia Gutiérrez Zayas", boletos:5 },
+    { id_familia:15, nombre_familia:"Familia Díaz Peralta", boletos:4 },
+    { id_familia:16, nombre_familia:"Familia Ortega Díaz-Martínez", boletos:8 },
+    { id_familia:17, nombre_familia:"Familia García Gutiérrez", boletos:4 },
+    { id_familia:18, nombre_familia:"Familia Ortega Gutiérrez", boletos:4 },
+    { id_familia:19, nombre_familia:"Familia Gutiérrez Gómez", boletos:2 },
+    { id_familia:20, nombre_familia:"Familia Sánchez", boletos:3 },
+    { id_familia:21, nombre_familia:"Familia Monroy Anaya", boletos:2 },
+    { id_familia:22, nombre_familia:"Familia Monroy Anaya", boletos:2 },
+    { id_familia:23, nombre_familia:"Familia Monroy Anaya", boletos:4 },
+    { id_familia:24, nombre_familia:"Familia Monroy Anaya", boletos:3 },
+    { id_familia:25, nombre_familia:"Familia Monroy Lara", boletos:3 },
+    { id_familia:26, nombre_familia:"Familia Ponce de León Monroy", boletos:4 },
+    { id_familia:27, nombre_familia:"Familia Ponce de León Monroy", boletos:3 },
+    { id_familia:28, nombre_familia:"Familia Monroy Lara", boletos:6 },
+    { id_familia:29, nombre_familia:"Familia Martínez Ortiz", boletos:3 },
+    { id_familia:30, nombre_familia:"Familia Gallegos Gutiérrez", boletos:4 },
+    { id_familia:31, nombre_familia:"Familia Tapia Gallegos", boletos:4 },
+    { id_familia:32, nombre_familia:"Familia Gutiérrez Campos", boletos:4 },
+    { id_familia:33, nombre_familia:"Familia Gutiérrez Rodríguez", boletos:3 },
+    { id_familia:34, nombre_familia:"Familia Ortiz Rodríguez", boletos:3 },
+    { id_familia:35, nombre_familia:"Familia Ortiz Rodríguez", boletos:3 },
+    { id_familia:36, nombre_familia:"Familia Ortiz Rodríguez", boletos:4 },
+    { id_familia:37, nombre_familia:"Familia Peñaloza", boletos:2 },
+    { id_familia:38, nombre_familia:"Familia Ortega Díaz", boletos:4 },
+    { id_familia:39, nombre_familia:"Familia de Cristian", boletos:3 },
+    { id_familia:40, nombre_familia:"Familia Mancilla", boletos:3 },
+    { id_familia:41, nombre_familia:"Familia Jiménez Martínez de Velasco", boletos:2 },
+    { id_familia:42, nombre_familia:"Familia Martínez Amezcua", boletos:3 },
+    { id_familia:43, nombre_familia:"Fernando y Ángel", boletos:2 },
+    { id_familia:44, nombre_familia:"Itzel Martínez García", boletos:1 },
+    { id_familia:45, nombre_familia:"Aitana Rodea Ramírez", boletos:1 },
+    { id_familia:46, nombre_familia:"Ana y Brenda Hernández", boletos:1 },
+    { id_familia:47, nombre_familia:"Camila González Hernández", boletos:1 },
+    { id_familia:48, nombre_familia:"Santiago Ramos Sotelo", boletos:1 },
+    { id_familia:49, nombre_familia:"Alejandro Valencia Barba", boletos:1 },
+    { id_familia:50, nombre_familia:"Azul Morales Esquivel", boletos:1 },
+    { id_familia:51, nombre_familia:"Ashley", boletos:1 }
 ];
 
-
-
 // LEER PARAMETRO DEL LINK
-
-const params = new URLSearchParams(window.location.search)
-const idFamilia = parseInt(params.get("familia"))
-
-let familiaActual = null
+const params = new URLSearchParams(window.location.search);
+const idFamilia = parseInt(params.get("familia"));
+let familiaActual = null;
 
 if(idFamilia){
-
-familiaActual = familias.find(f => f.id_familia === idFamilia)
-
-if(familiaActual){
-
-document.getElementById("nombreFamilia").innerText = familiaActual.nombre_familia
-
-document.getElementById("boletosTexto").innerText =
-"Boletos asignados: " + familiaActual.boletos
-
-document.getElementById("confirmados").max = familiaActual.boletos
-
+  familiaActual = familias.find(f => f.id_familia === idFamilia);
+  if(familiaActual){
+    document.getElementById("nombreFamilia").innerText = familiaActual.nombre_familia;
+    document.getElementById("boletosTexto").innerText = "Boletos asignados: " + familiaActual.boletos;
+    
+    // Configuramos el input con el máximo de boletos permitidos
+    const inputConfirmados = document.getElementById("confirmados");
+    inputConfirmados.max = familiaActual.boletos;
+    inputConfirmados.min = 0;
+    inputConfirmados.value = familiaActual.boletos; // Sugerimos que van todos por defecto
+  }
 }
-
-}
-
-
 
 // ENVIAR CONFIRMACION A GOOGLE SHEETS
-
-const scriptURL = "https://script.google.com/macros/s/AKfycbxzl6LVeT6pgqup2ah08bd7stNQyFuxyGCmzIrXqfZZncCPVN7gEPJ5H1H-2AAvn163FA/exec"
-
+const scriptURL = "https://script.google.com/macros/s/AKfycbxzl6LVeT6pgqup2ah08bd7stNQyFuxyGCmzIrXqfZZncCPVN7gEPJ5H1H-2AAvn163FA/exec";
 
 function confirmarAsistencia(){
+  const input = document.getElementById("confirmados");
+  const confirmados = parseInt(input.value);
 
-const confirmados = document.getElementById("confirmados").value
+  // VALIDACIÓN DE SEGURIDAD
+  if(isNaN(confirmados) || confirmados < 0){
+    alert("Por favor ingresa un número válido de asistentes.");
+    return;
+  }
 
-if(!confirmados){
-alert("Por favor ingresa cuántas personas asistirán")
-return
-}
+  if(familiaActual && confirmados > familiaActual.boletos){
+    alert("Lo sentimos, solo tienes " + familiaActual.boletos + " boletos asignados.");
+    input.value = familiaActual.boletos; // Corregimos el valor automáticamente
+    return;
+  }
 
-fetch(scriptURL,{
-
-method:"POST",
-
-body:new URLSearchParams({
-
-id_familia:idFamilia,
-confirmados:confirmados
-
-})
-
-})
-
-.then(res => res.text())
-.then(data => {
-
-document.getElementById("mensaje").innerHTML =
-"✅ Confirmación enviada correctamente"
-
-})
-
-.catch(()=>{
-
-document.getElementById("mensaje").innerHTML =
-"❌ Hubo un error al enviar la confirmación"
-
-})
-
+  fetch(scriptURL,{
+    method:"POST",
+    body:new URLSearchParams({
+      id_familia: idFamilia,
+      confirmados: confirmados,
+      nombre_familia: familiaActual ? familiaActual.nombre_familia : "Desconocido"
+    })
+  })
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("mensaje").innerHTML = "✅ Confirmación enviada correctamente";
+    document.querySelector(".confirmacion button").disabled = true; // Desactivar botón tras enviar
+  })
+  .catch(()=>{
+    document.getElementById("mensaje").innerHTML = "❌ Hubo un error al enviar la confirmación";
+  });
 }
