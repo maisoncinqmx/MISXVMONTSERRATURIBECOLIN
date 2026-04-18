@@ -916,82 +916,103 @@ h3 {
 /* ============================================================
    AJUSTES FINALES: ESCALA, FONDOS Y GRID AUTOMÁTICO
    ============================================================ */
+/* ============================================================
+   AJUSTES FINALES: ORDEN DE GRID, FUENTES Y ESPACIOS
+   ============================================================ */
 
 @media (max-width: 768px) {
-    /* 1. Botón Overlay un poquito más grande */
-    #abrir {
-        padding: 14px 28px !important;
-        font-size: 19px !important;
+    /* 1. Logo Overlay un poco más grande */
+    .logo-overlay {
+        width: 90% !important;
     }
 
-    /* 2. Fotos 1 y 2 con fondo de portada y un poco más chicas */
-    .foto-separador, .foto-separador2 {
-        background-image: url("img/portada.jpeg") !important;
-        background-size: cover;
-        padding: 40px 0 !important; /* Espacio para que luzca el fondo */
+    /* 2. H2 de Padres y Padrinos (Estaba muy grande, bajamos a 45px o 50px) */
+    .padres h2, .padrinos h2 {
+        font-size: 55px !important; /* Ajusta este número si lo quieres más chico */
+        line-height: 1.1 !important;
+        margin-bottom: 10px !important;
     }
 
-    .foto-separador img, .foto-separador2 img {
-        width: 80% !important; /* Un poco más chicas para ver el fondo */
-        margin: 0 auto;
-        display: block;
+    /* 3. Espaciado entre nombres de padrinos (P) */
+    .padrinos p {
+        margin: 5px 0 !important; /* Menos espacio entre nombres */
+        font-size: 24px !important;
     }
 
-    /* 3. El Grid: Automático a 1 columna en celular */
+    /* Margen inferior después del último padrino */
+    .padrinos {
+        padding-bottom: 60px !important; 
+        height: auto !important;
+    }
+
+    /* 4. REORDENAR EL GRID (Misa y Recepción) */
     .evento-grid {
         display: flex !important;
-        flex-direction: column !important; /* Apila los elementos */
-        gap: 20px !important; /* Separación entre foto y texto */
+        flex-direction: column !important; /* Apilado vertical */
     }
+
+    /* Forzamos el orden visual */
+    /* Misa: Imagen (1), Texto (2) */
+    .evento-grid .imagen:nth-child(1) { order: 1; }
+    .evento-grid .misa { order: 2; margin-bottom: 30px; }
+
+    /* Recepción: Imagen (4), Texto (3) -> Reordenamos para que sea Imagen luego Texto */
+    .evento-grid .imagen:nth-child(4) { order: 3; }
+    .evento-grid .recepcion { order: 4; }
 
     .evento-grid .imagen {
-        width: 90% !important;
-        margin: 0 auto;
+        width: 100% !important;
         height: auto !important;
     }
 
-    .evento-grid .imagen img {
-        width: 100%;
-        border-radius: 15px;
+    /* 5. ARREGLO DEL CONTADOR (Para que no se desborde) */
+    .contador {
+        width: 100% !important;
+        padding: 40px 0 !important;
+        margin: 0 !important;
+        box-sizing: border-box;
+        overflow: hidden; /* Evita que los hijos lo empujen */
     }
 
-    /* 4. Espacios entre Grid y Vestimenta */
-    section.evento-grid {
-        margin-bottom: 0 !important;
-        padding-bottom: 20px !important;
+    .reloj-wrapper {
+        display: flex !important;
+        justify-content: center !important;
+        gap: 8px !important; /* Menos espacio entre cuadros para que quepan */
+        width: 100% !important;
     }
 
-    /* 5. Código de vestimenta: H2 un pelín más chico */
-    .vestimenta h2 {
-        font-size: 43px !important; /* Bajamos 2px */
-        margin-top: 0 !important;
+    .time-card {
+        flex: 1; /* Hace que los cuadritos se encojan proporcionalmente */
+        min-width: 70px;
     }
 
-    .vestimenta {
-        padding-top: 10px !important;
+    .time-num {
+        font-size: 1.8rem !important; /* Números un poco más chicos para que quepan */
+        padding: 8px !important;
+        min-width: auto !important;
+        width: 90%;
     }
 
-    /* 6. Fotos 3 y 4: Ya no se desbordan */
-    .foto-vestimenta, .foto4-img {
-        width: 85% !important; /* Ajuste para que no se salgan */
-        height: auto !important;
-        max-width: 100%;
-        margin: 0 auto;
-        display: block;
+    .time-label {
+        font-size: 12px !important; /* Etiquetas más chicas */
     }
 
-    /* 7. Arreglo del espacio blanco (Sección separadora) */
-    .separador {
-        height: 80px !important; /* Le damos un tamaño pequeño pero visible */
-        background-image: url("img/portada.jpeg");
-        background-size: cover;
+    /* 6. Portada Central (Sección Body) un poco más grande */
+    .portada-central {
+        width: 98% !important;
     }
 }
 
-/* --- ESTO ES PARA LA COMPUTADORA (ANIMACIONES) --- */
+/* --- COMPUTADORA (Mantiene el 2x2 original) --- */
 @media (min-width: 769px) {
     .evento-grid {
         display: grid !important;
-        grid-template-columns: 1fr 1fr; /* Mantiene el 2x2 en PC */
+        grid-template-columns: 1fr 1fr;
     }
+    /* En PC respetamos el orden original del HTML */
+    .evento-grid .imagen:nth-child(1) { order: 1; }
+    .evento-grid .misa { order: 2; }
+    .evento-grid .recepcion { order: 3; }
+    .evento-grid .imagen:nth-child(4) { order: 4; }
+
 }
