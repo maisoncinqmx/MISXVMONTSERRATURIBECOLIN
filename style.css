@@ -264,7 +264,7 @@ p {
 
 .padres h2 {
   font-family: 'Parisienne', cursive;
-  font-size: 90px;
+  font-size: 100px;
   /* opcional para que luzca más elegante */
   color: #6532C4;
   margin: 0;
@@ -294,7 +294,7 @@ p {
 
 .padrinos h2 {
   font-family: 'Parisienne', cursive;
-  font-size: 90px;
+  font-size: 100px;
   /* opcional para que luzca más elegante */
   color: #6532C4;
   margin: 0;
@@ -916,26 +916,15 @@ h3 {
 /* ============================================================
    AJUSTES FINALES: ESCALA, FONDOS Y GRID AUTOMÁTICO
    ============================================================ */
+
 /* ============================================================
    AJUSTES FINALES: ORDEN DE GRID, FUENTES Y ESPACIOS
    ============================================================ */
-@media (max-width: 768px) {
-    /* --- CORRECCIÓN LOGO OVERLAY (Para que no tape el botón) --- */
-    .logo-overlay {
-        width: 180px !important; /* Un tamaño fijo que no falla en celular */
-        max-height: 25vh; /* Que nunca ocupe más del 25% de la altura de la pantalla */
-        object-fit: contain;
-        margin-bottom: 10px !important;
-    }
 
-    /* Ajuste extra para el contenedor del overlay por si se sigue viendo apretado */
-    .contenido-overlay {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 100%;
-        gap: 10px;
+@media (max-width: 768px) {
+    /* 1. Logo Overlay un poco más grande */
+    .logo-overlay {
+        width: 90% !important;
     }
 
     /* 2. H2 de Padres y Padrinos (Estaba muy grande, bajamos a 45px o 50px) */
@@ -957,25 +946,56 @@ h3 {
         height: auto !important;
     }
 
-    /* 4. REORDENAR EL GRID (Misa y Recepción) */
-    .evento-grid {
-        display: flex !important;
-        flex-direction: column !important; /* Apilado vertical */
-    }
+/* --- ESTILO UNIFICADO PARA PC Y CELULAR --- */
 
-    /* Forzamos el orden visual */
-    /* Misa: Imagen (1), Texto (2) */
-    .evento-grid .imagen:nth-child(1) { order: 1; }
-    .evento-grid .misa { order: 2; margin-bottom: 30px; }
+.evento-grid {
+    display: flex !important;
+    flex-direction: column !important; /* Fuerza una sola columna siempre */
+    align-items: center !important;
+    width: 100% !important;
+    max-width: 800px; /* Para que en PC no se vea gigante */
+    margin: 0 auto !important;
+    gap: 40px !important; /* Espacio entre secciones */
+    padding: 20px !important;
+}
 
-    /* Recepción: Imagen (4), Texto (3) -> Reordenamos para que sea Imagen luego Texto */
-    .evento-grid .imagen:nth-child(4) { order: 3; }
-    .evento-grid .recepcion { order: 4; }
+.evento-grid .imagen {
+    width: 90% !important; /* Ancho cómodo */
+    max-width: 500px; /* Límite para que en PC se vea elegante */
+}
 
-    .evento-grid .imagen {
-        width: 100% !important;
-        height: auto !important;
-    }
+.evento-grid .imagen img {
+    width: 100% !important;
+    height: auto !important;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Un toque de sombra */
+}
+
+.misa, .recepcion {
+    text-align: center !important;
+    width: 100% !important;
+}
+
+.misa h2, .recepcion h2 {
+    font-size: 40px !important;
+    margin-bottom: 10px !important;
+}
+
+.misa p, .recepcion p {
+    font-size: 22px !important;
+    margin: 5px 0 !important;
+}
+
+.misa a, .recepcion a {
+    display: inline-block !important;
+    margin-top: 15px !important;
+    padding: 12px 25px !important;
+    text-decoration: none;
+    background-color: #e1bee7; /* O el color que estés usando */
+    color: #000;
+    border-radius: 25px;
+    font-weight: bold;
+}
 
     /* 5. ARREGLO DEL CONTADOR (Para que no se desborde) */
     .contador {
@@ -1015,16 +1035,3 @@ h3 {
     }
 }
 
-/* --- COMPUTADORA (Mantiene el 2x2 original) --- */
-@media (min-width: 769px) {
-    .evento-grid {
-        display: grid !important;
-        grid-template-columns: 1fr 1fr;
-    }
-    /* En PC respetamos el orden original del HTML */
-    .evento-grid .imagen:nth-child(1) { order: 1; }
-    .evento-grid .misa { order: 2; }
-    .evento-grid .recepcion { order: 3; }
-    .evento-grid .imagen:nth-child(4) { order: 4; }
-
-}
