@@ -70,7 +70,7 @@ body {
 .linea {
   width: clamp(30px, 10vw, 60px);
   height: 3px;
-  background: #6532C4;
+  background: #d4af37;
   border-radius: 5px;
 }
 
@@ -950,4 +950,106 @@ a:hover {
     bottom right;
   pointer-events: none;
   z-index: 2;
+}
+
+/* ============================================================
+   FADE TEXTOS
+   ============================================================ */
+.fade-texto {
+  opacity: 0;
+  transition: opacity 2s ease;
+}
+
+.fade-texto.visible {
+  opacity: 1;
+}
+
+/* ============================================================
+   MARIPOSAS FLOTANTES
+   ============================================================ */
+.mariposa {
+  position: fixed;
+  width: 28px;
+  height: auto;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 9998;
+  animation: volar 18s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
+/* Cada mariposa tiene posición, tamaño, duración y retraso distintos */
+.mariposa:nth-child(1) {
+  left: 8%;
+  top: 15%;
+  width: 22px;
+  animation-duration: 20s;
+  animation-delay: 0s;
+}
+.mariposa:nth-child(2) {
+  left: 75%;
+  top: 30%;
+  width: 26px;
+  animation-duration: 17s;
+  animation-delay: -5s;
+}
+.mariposa:nth-child(3) {
+  left: 50%;
+  top: 60%;
+  width: 20px;
+  animation-duration: 22s;
+  animation-delay: -9s;
+}
+.mariposa:nth-child(4) {
+  left: 20%;
+  top: 70%;
+  width: 24px;
+  animation-duration: 19s;
+  animation-delay: -3s;
+}
+.mariposa:nth-child(5) {
+  left: 88%;
+  top: 55%;
+  width: 21px;
+  animation-duration: 23s;
+  animation-delay: -13s;
+}
+.mariposa:nth-child(6) {
+  left: 40%;
+  top: 20%;
+  width: 25px;
+  animation-duration: 16s;
+  animation-delay: -7s;
+}
+
+/* Vuelo ondulado: sube, se mueve a los lados, aparece y desaparece */
+@keyframes volar {
+  0% {
+    transform: translate(0px, 0px) rotate(-5deg) scaleX(1);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.55;
+  }
+  25% {
+    transform: translate(30px, -40px) rotate(5deg) scaleX(-1);
+  }
+  40% {
+    transform: translate(-20px, -80px) rotate(-8deg) scaleX(1);
+  }
+  55% {
+    transform: translate(40px, -120px) rotate(6deg) scaleX(-1);
+  }
+  70% {
+    transform: translate(-10px, -160px) rotate(-4deg) scaleX(1);
+    opacity: 0.5;
+  }
+  85% {
+    transform: translate(25px, -210px) rotate(7deg) scaleX(-1);
+    opacity: 0.3;
+  }
+  100% {
+    transform: translate(0px, -260px) rotate(-5deg) scaleX(1);
+    opacity: 0;
+  }
 }
