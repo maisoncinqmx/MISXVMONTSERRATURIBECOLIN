@@ -195,3 +195,23 @@ function confirmarAsistencia(){
     document.getElementById("mensaje").innerHTML = "❌ Hubo un error al enviar la confirmación";
   });
 }
+
+// ── FADE TEXTOS ──
+const fadeEls = document.querySelectorAll('.fade-texto');
+function mostrarFades() {
+  const trigger = window.innerHeight * 0.88;
+  fadeEls.forEach(el => {
+    if (el.getBoundingClientRect().top < trigger) {
+      el.classList.add('visible');
+    }
+  });
+}
+window.addEventListener('scroll', mostrarFades);
+window.addEventListener('load', mostrarFades);
+
+// ── MARIPOSAS — se activan solo cuando se abre la invitación ──
+document.getElementById('abrir').addEventListener('click', () => {
+  setTimeout(() => {
+    document.body.classList.add('mariposas-activas');
+  }, 800);
+});
