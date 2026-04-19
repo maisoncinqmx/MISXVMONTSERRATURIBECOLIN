@@ -70,7 +70,7 @@ body {
 .linea {
   width: clamp(30px, 10vw, 60px);
   height: 3px;
-  background: #d4af37;
+  background: #6532C4;
   border-radius: 5px;
 }
 
@@ -878,7 +878,8 @@ a:hover {
 .foto-separador2,
 .padres,
 .padrinos,
-.evento-grid,
+.misa,
+.recepcion,
 .vestimenta,
 .monvestido,
 .regalos,
@@ -888,7 +889,7 @@ a:hover {
 }
 
 :root {
-  --corner-size: clamp(40px, 8vw, 80px);
+  --corner-size: clamp(55px, 11vw, 110px);
 }
 
 /* Esquina superior izquierda — top1.png */
@@ -897,7 +898,8 @@ a:hover {
 .foto-separador2::before,
 .padres::before,
 .padrinos::before,
-.evento-grid::before,
+.misa::before,
+.recepcion::before,
 .vestimenta::before,
 .monvestido::before,
 .regalos::before,
@@ -923,7 +925,8 @@ a:hover {
 .foto-separador2::after,
 .padres::after,
 .padrinos::after,
-.evento-grid::after,
+.misa::after,
+.recepcion::after,
 .vestimenta::after,
 .monvestido::after,
 .regalos::after,
