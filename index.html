@@ -4,27 +4,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="UTF-8">
   <title>Mis XV</title>
-
   <link rel="stylesheet" href="style.css">
-
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<!-- 🦋 MARIPOSAS -->
-<img src="img/mariposa.png" class="mariposa">
-<img src="img/mariposa.png" class="mariposa">
-<img src="img/mariposa.png" class="mariposa">
-<img src="img/mariposa.png" class="mariposa">
-<img src="img/mariposa.png" class="mariposa">
-<img src="img/mariposa.png" class="mariposa">
-<img src="img/mariposa.png" class="mariposa">
-<img src="img/mariposa.png" class="mariposa">
-<img src="img/mariposa.png" class="mariposa">
-<img src="img/mariposa.png" class="mariposa">
-
+<!-- 🦋 MARIPOSAS — clase única por cada una -->
+<img src="img/mariposa.png" class="mariposa mariposa-1">
+<img src="img/mariposa.png" class="mariposa mariposa-2">
+<img src="img/mariposa.png" class="mariposa mariposa-3">
+<img src="img/mariposa.png" class="mariposa mariposa-4">
+<img src="img/mariposa.png" class="mariposa mariposa-5">
+<img src="img/mariposa.png" class="mariposa mariposa-6">
+<img src="img/mariposa.png" class="mariposa mariposa-7">
+<img src="img/mariposa.png" class="mariposa mariposa-8">
+<img src="img/mariposa.png" class="mariposa mariposa-9">  
+<img src="img/mariposa.png" class="mariposa mariposa-10">
+<img src="img/mariposa.png" class="mariposa mariposa-11">
+<img src="img/mariposa.png" class="mariposa mariposa-12">
+  
 <section class="portada">
   <object data="img/portada-central.svg" class="portada-central animar"></object>
   <p class="frase fade-texto">
@@ -72,8 +72,6 @@
 <section class="separador"></section>
 
 <section class="evento-grid">
-
-  <!-- MISA -->
   <div class="imagen animar-izq">
     <img src="img/misa.png">
   </div>
@@ -86,7 +84,6 @@
     </a>
   </div>
 
-  <!-- RECEPCIÓN -->
   <div class="imagen animar-der">
     <img src="img/salon.png">
   </div>
@@ -98,7 +95,6 @@
       Ver ubicación
     </a>
   </div>
-
 </section>
 
 <section class="vestimenta">
@@ -190,6 +186,7 @@
 <button id="toggleMusica">🔊</button>
 
 <script>
+  // ── FADE TEXTOS ──
   const fadeEls = document.querySelectorAll('.fade-texto');
   function mostrarFades() {
     const trigger = window.innerHeight * 0.88;
@@ -201,6 +198,14 @@
   }
   window.addEventListener('scroll', mostrarFades);
   window.addEventListener('load', mostrarFades);
+
+  // ── MARIPOSAS — se activan solo cuando se abre la invitación ──
+  document.getElementById('abrir').addEventListener('click', () => {
+    // Pequeño delay para que el overlay termine de subir antes de soltar las mariposas
+    setTimeout(() => {
+      document.body.classList.add('mariposas-activas');
+    }, 800);
+  });
 </script>
 
 </body>
