@@ -70,7 +70,7 @@ body {
 .linea {
   width: clamp(30px, 10vw, 60px);
   height: 3px;
-  background: #d4af37;
+  background: #6532C4;
   border-radius: 5px;
 }
 
