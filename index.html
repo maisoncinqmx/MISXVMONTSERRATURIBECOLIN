@@ -185,7 +185,37 @@
 <!-- 🔊 BOTÓN MÚSICA -->
 <button id="toggleMusica">🔊</button>
 
+<script>
+  // ── FADE TEXTOS ──
+  const fadeEls = document.querySelectorAll('.fade-texto');
+  function mostrarFades() {
+    const trigger = window.innerHeight * 0.88;
+    fadeEls.forEach(el => {
+      if (el.getBoundingClientRect().top < trigger) {
+        el.classList.add('visible');
+      }
+    });
+  }
+  window.addEventListener('scroll', mostrarFades);
+  window.addEventListener('load', mostrarFades);
 
+  // ── MARIPOSAS — se activan solo cuando se abre la invitación ──
+  document.getElementById('abrir').addEventListener('click', () => {
+    // Pequeño delay para que el overlay termine de subir antes de soltar las mariposas
+    setTimeout(() => {
+      document.body.classList.add('mariposas-activas');
+    }, 800);
+  });
+</script>
+
+<script>
+  // ── MARIPOSAS — se activan solo cuando se abre la invitación ──
+  document.getElementById('abrir').addEventListener('click', () => {
+    setTimeout(() => {
+      document.body.classList.add('mariposas-activas');
+    }, 800);
+  });
+</script>
 
 </body>
 </html>
