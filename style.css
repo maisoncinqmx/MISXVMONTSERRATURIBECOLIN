@@ -48,7 +48,7 @@ body {
 }
 
 .logo-overlay {
-  width: min(280px, 80vw);
+  width: min(380px, 88vw);
   margin-bottom: 20px;
 }
 
@@ -422,6 +422,7 @@ a:hover {
   color: #6532C4;
   line-height: 1.2;
   margin: 0 0 8px 0;
+  padding-top: clamp(18px, 4vw, 32px);
 }
 
 .misa p,
@@ -862,4 +863,88 @@ a:hover {
   .foto-separador2 img {
     width: 75%;
   }
+}
+
+/* ============================================================
+   ESQUINEROS DECORATIVOS
+   Secciones que los llevan:
+   portada, foto-separador, foto-separador2, padres, padrinos,
+   evento-grid, vestimenta, monvestido, regalos, foto4, confirmacion
+   NO llevan: mensaje, contador, separador
+   ============================================================ */
+
+.portada,
+.foto-separador,
+.foto-separador2,
+.padres,
+.padrinos,
+.evento-grid,
+.vestimenta,
+.monvestido,
+.regalos,
+.foto4,
+.confirmacion {
+  position: relative;
+}
+
+:root {
+  --corner-size: clamp(40px, 8vw, 80px);
+}
+
+/* Esquina superior izquierda — top1.png */
+.portada::before,
+.foto-separador::before,
+.foto-separador2::before,
+.padres::before,
+.padrinos::before,
+.evento-grid::before,
+.vestimenta::before,
+.monvestido::before,
+.regalos::before,
+.foto4::before,
+.confirmacion::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--corner-size);
+  height: var(--corner-size);
+  background-image: url('img/top1.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top left;
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Esquinas: top derecha, bottom izquierda, bottom derecha */
+.portada::after,
+.foto-separador::after,
+.foto-separador2::after,
+.padres::after,
+.padrinos::after,
+.evento-grid::after,
+.vestimenta::after,
+.monvestido::after,
+.regalos::after,
+.foto4::after,
+.confirmacion::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    url('img/top2.png'),
+    url('img/bottom1.png'),
+    url('img/bottom2.png');
+  background-size:
+    var(--corner-size) var(--corner-size),
+    var(--corner-size) var(--corner-size),
+    var(--corner-size) var(--corner-size);
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position:
+    top right,
+    bottom left,
+    bottom right;
+  pointer-events: none;
+  z-index: 2;
 }
