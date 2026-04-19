@@ -70,10 +70,6 @@ document.addEventListener("DOMContentLoaded", () => {
     reproduciendo = true;
     toggle.innerText = "🔊";
 
-    // 🦋 Activar mariposas tras el overlay
-    setTimeout(() => {
-      document.body.classList.add('mariposas-activas');
-    }, 800);
   });
 
   // BOTÓN MÚSICA
@@ -212,4 +208,4 @@ function mostrarFades() {
   });
 }
 window.addEventListener('scroll', mostrarFades);
-window.addEventListener('load', mostrarFades);
+window.addEventListener('load', mostrarFades);window.addEventListener('load', mostrarFades);
