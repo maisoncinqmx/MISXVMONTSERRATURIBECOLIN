@@ -69,6 +69,11 @@ document.addEventListener("DOMContentLoaded", () => {
     overlay.classList.add("ocultar");
     reproduciendo = true;
     toggle.innerText = "🔊";
+
+    // 🦋 Activar mariposas tras el overlay
+    setTimeout(() => {
+      document.body.classList.add('mariposas-activas');
+    }, 800);
   });
 
   // BOTÓN MÚSICA
@@ -208,10 +213,3 @@ function mostrarFades() {
 }
 window.addEventListener('scroll', mostrarFades);
 window.addEventListener('load', mostrarFades);
-
-// ── MARIPOSAS — se activan solo cuando se abre la invitación ──
-document.getElementById('abrir').addEventListener('click', () => {
-  setTimeout(() => {
-    document.body.classList.add('mariposas-activas');
-  }, 800);
-});
