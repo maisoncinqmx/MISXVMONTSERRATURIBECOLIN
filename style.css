@@ -1102,3 +1102,70 @@ body.mariposas-activas .mariposa {
 .fade-texto.visible {
   opacity: 1;
 }
+/* ============================================================
+   LOADING SCREEN
+   ============================================================ */
+#loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('img/portada.jpeg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+  transition: opacity 0.8s ease;
+}
+
+#loading-screen.loading-ocultar {
+  opacity: 0;
+}
+
+.loading-contenido {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.loading-logo {
+  width: min(220px, 60vw);
+  animation: pulsarLogo 2s ease-in-out infinite;
+}
+
+@keyframes pulsarLogo {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.7; transform: scale(0.97); }
+}
+
+.loading-texto {
+  font-family: 'EB Garamond', serif;
+  font-size: clamp(16px, 4vw, 20px);
+  color: #4a1d9e;
+  letter-spacing: 2px;
+  margin: 0;
+  animation: pulsarTexto 1.5s ease-in-out infinite;
+}
+
+@keyframes pulsarTexto {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.4; }
+}
+
+.loading-circulo {
+  width: 36px;
+  height: 36px;
+  border: 3px solid rgba(140, 73, 255, 0.2);
+  border-top: 3px solid #8c49ff;
+  border-radius: 50%;
+  animation: girar 0.9s linear infinite;
+}
+
+@keyframes girar {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
