@@ -10,7 +10,15 @@
 </head>
 
 <body>
-
+<!-- ⏳ LOADING SCREEN -->
+<div id="loading-screen">
+  <div class="loading-contenido">
+    <img src="img/portada-central.svg" class="loading-logo">
+    <p class="loading-texto">Cargando invitación...</p>
+    <div class="loading-circulo"></div>
+  </div>
+</div> 
+  
 <!-- 🦋 MARIPOSAS — clase única por cada una -->
 <img src="img/mariposa.png" class="mariposa mariposa-1">
 <img src="img/mariposa.png" class="mariposa mariposa-2">
@@ -217,6 +225,16 @@
     }, 800);
   });
 </script>
-
+  
+<script>
+  // ⏳ LOADING SCREEN — se quita a los 7 segundos
+  const loadingScreen = document.getElementById('loading-screen');
+  setTimeout(() => {
+    loadingScreen.classList.add('loading-ocultar');
+    setTimeout(() => {
+      loadingScreen.style.display = 'none';
+    }, 800);
+  }, 7000);
+</script>
 </body>
 </html>
