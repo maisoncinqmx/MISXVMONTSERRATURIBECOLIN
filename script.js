@@ -104,7 +104,7 @@ const familias = [
     { id_familia:14, nombre_familia:"Familia Gutiérrez Zayas", boletos:5 },
     { id_familia:15, nombre_familia:"Familia Díaz Peralta", boletos:4 },
     { id_familia:16, nombre_familia:"Familia Ortega Díaz-Martínez", boletos:8 },
-    { id_familia:17, nombre_familia:"Familia García Gutiérrez", boletos:4 },
+    { id_familia:17, nombre_familia:"Familia García Gutiérrez", boletos:2 },
     { id_familia:18, nombre_familia:"Familia Ortega Gutiérrez", boletos:4 },
     { id_familia:19, nombre_familia:"Familia Gutiérrez Gómez", boletos:2 },
     { id_familia:20, nombre_familia:"Familia Sánchez", boletos:3 },
@@ -112,9 +112,9 @@ const familias = [
     { id_familia:22, nombre_familia:"Familia Monroy Anaya", boletos:2 },
     { id_familia:23, nombre_familia:"Familia Monroy Anaya", boletos:4 },
     { id_familia:24, nombre_familia:"Familia Monroy Anaya", boletos:3 },
-    { id_familia:25, nombre_familia:"Familia Monroy Lara", boletos:3 },
+    { id_familia:25, nombre_familia:"Familia Monroy Lara", boletos:2 },
     { id_familia:26, nombre_familia:"Familia Ponce de León Monroy", boletos:4 },
-    { id_familia:27, nombre_familia:"Familia Ponce de León Monroy", boletos:3 },
+    { id_familia:27, nombre_familia:"Familia Ponce de León Monroy", boletos:4 },
     { id_familia:28, nombre_familia:"Familia Monroy Lara", boletos:6 },
     { id_familia:29, nombre_familia:"Familia Martínez Ortiz", boletos:3 },
     { id_familia:30, nombre_familia:"Familia Gallegos Gutiérrez", boletos:4 },
@@ -126,11 +126,11 @@ const familias = [
     { id_familia:36, nombre_familia:"Familia Ortiz Rodríguez", boletos:4 },
     { id_familia:37, nombre_familia:"Familia Peñaloza", boletos:2 },
     { id_familia:38, nombre_familia:"Familia Ortega Díaz", boletos:4 },
-    { id_familia:39, nombre_familia:"Familia Velázquez", boletos:3 },
+    { id_familia:39, nombre_familia:"Familia Velázquez", boletos:2 },
     { id_familia:40, nombre_familia:"Familia Mancilla", boletos:3 },
     { id_familia:41, nombre_familia:"Familia Jiménez Martínez de Velasco", boletos:2 },
-    { id_familia:42, nombre_familia:"Familia Martínez Amezcua", boletos:3 },
-    { id_familia:43, nombre_familia:"Fernando y Ángel", boletos:2 },
+    { id_familia:42, nombre_familia:"Familia Martínez Amezcua", boletos:2 },
+    { id_familia:43, nombre_familia:"Familia Amezcua Diaz", boletos:2 },
     { id_familia:44, nombre_familia:"Itzel Martínez García", boletos:1 },
     { id_familia:45, nombre_familia:"Aitana Rodea Ramírez", boletos:1 },
     { id_familia:46, nombre_familia:"Ana y Brenda Hernández", boletos:1 },
@@ -139,6 +139,20 @@ const familias = [
     { id_familia:49, nombre_familia:"Alejandro Valencia Barba", boletos:1 },
     { id_familia:50, nombre_familia:"Azul Morales Esquivel", boletos:1 },
     { id_familia:51, nombre_familia:"Ashley Enciso Corona", boletos:1 }
+    { id_familia:52, nombre_familia:"Abigail Rangel Garcia", boletos:1 }
+    { id_familia:53, nombre_familia:"Vanessa", boletos:1 },
+    { id_familia:54, nombre_familia:"Emmanuel Ponce", boletos:1 }
+    { id_familia:55, nombre_familia:"Julieta", boletos:1 }
+    { id_familia:56, nombre_familia:"Mia", boletos:1 }
+    { id_familia:57, nombre_familia:"Nicolas", boletos:1 },
+    { id_familia:58, nombre_familia:"Daniel", boletos:1 }
+    { id_familia:59, nombre_familia:"Familia Martinez Gutierrez", boletos:2 }
+    { id_familia:60, nombre_familia:"Padre Luis Alberto", boletos:1 }
+    { id_familia:61, nombre_familia:"Familia Rojas Zarate", boletos:4 },
+    { id_familia:62, nombre_familia:"Familia Lopez Pintor", boletos:4 }
+    { id_familia:63, nombre_familia:"Familia Hernandez Brigido", boletos:3 }
+    { id_familia:64, nombre_familia:"Pablo y Belia", boletos:2 }
+    { id_familia:65, nombre_familia:"Sr. Horacio y Patricia", boletos:2 },
 ];
 
 // LEER PARAMETRO DEL LINK
