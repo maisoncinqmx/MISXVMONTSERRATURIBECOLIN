@@ -10,6 +10,7 @@
 </head>
 
 <body>
+
 <!-- ⏳ LOADING SCREEN -->
 <div id="loading-screen">
   <div class="loading-contenido">
@@ -17,9 +18,9 @@
     <p class="loading-texto">Cargando invitación...</p>
     <div class="loading-circulo"></div>
   </div>
-</div> 
-  
-<!-- 🦋 MARIPOSAS — clase única por cada una -->
+</div>
+
+<!-- 🦋 MARIPOSAS -->
 <img src="img/mariposa.png" class="mariposa mariposa-1">
 <img src="img/mariposa.png" class="mariposa mariposa-2">
 <img src="img/mariposa.png" class="mariposa mariposa-3">
@@ -28,11 +29,11 @@
 <img src="img/mariposa.png" class="mariposa mariposa-6">
 <img src="img/mariposa.png" class="mariposa mariposa-7">
 <img src="img/mariposa.png" class="mariposa mariposa-8">
-<img src="img/mariposa.png" class="mariposa mariposa-9">  
+<img src="img/mariposa.png" class="mariposa mariposa-9">
 <img src="img/mariposa.png" class="mariposa mariposa-10">
 <img src="img/mariposa.png" class="mariposa mariposa-11">
 <img src="img/mariposa.png" class="mariposa mariposa-12">
-  
+
 <section class="portada">
   <object data="img/portada-central.svg" class="portada-central animar"></object>
   <p class="frase fade-texto">
@@ -85,12 +86,10 @@
   </div>
   <div class="misa animar-der">
     <h2 class="fade-texto">Misa</h2>
-    <p class="fade-texto">Parroquia María Reina</p> 
+    <p class="fade-texto">Parroquia María Reina</p>
     <p class="fade-texto">Día: 25 de Julio 2026</p>
     <p class="fade-texto">Hora: 03:45 pm</p>
-    <a class="fade-texto" href="https://www.google.com/maps/dir//Parroquia+de+Mar%C3%ADa+Reina,+San+Juan+del+R%C3%ADo+262,+Tlalpan,+14250+Ciudad+de+M%C3%A9xico,+CDMX" target="_blank">
-      Ver ubicación
-    </a>
+    <a class="fade-texto" href="https://www.google.com/maps/dir//Parroquia+de+Mar%C3%ADa+Reina,+San+Juan+del+R%C3%ADo+262,+Tlalpan,+14250+Ciudad+de+M%C3%A9xico,+CDMX" target="_blank">Ver ubicación</a>
   </div>
 
   <div class="imagen animar-der">
@@ -100,9 +99,7 @@
     <h2 class="fade-texto">Recepción</h2>
     <p class="fade-texto">Jardín de Eventos "La Herradura"</p>
     <p class="fade-texto">Hora: 05:30 pm</p>
-    <a class="fade-texto" href="https://www.google.com/maps/dir//Jardin+De+Eventos+La+Herradura" target="_blank">
-      Ver ubicación
-    </a>
+    <a class="fade-texto" href="https://www.google.com/maps/dir//Jardin+De+Eventos+La+Herradura" target="_blank">Ver ubicación</a>
   </div>
 </section>
 
@@ -194,6 +191,7 @@
 <!-- 🔊 BOTÓN MÚSICA -->
 <button id="toggleMusica">🔊</button>
 
+<!-- 🎛️ SCRIPT ÚNICO — todo en un solo bloque -->
 <script>
   // ── FADE TEXTOS ──
   const fadeEls = document.querySelectorAll('.fade-texto');
@@ -208,33 +206,23 @@
   window.addEventListener('scroll', mostrarFades);
   window.addEventListener('load', mostrarFades);
 
-  // ── MARIPOSAS — se activan solo cuando se abre la invitación ──
+  // ── LOADING SCREEN ──
+  const loadingScreen = document.getElementById('loading-screen');
+  setTimeout(() => {
+    loadingScreen.style.pointerEvents = 'none'; // deja de bloquear clicks
+    loadingScreen.classList.add('loading-ocultar');
+    setTimeout(() => {
+      loadingScreen.style.display = 'none';
+    }, 800);
+  }, 7000);
+
+  // ── MARIPOSAS — se activan al abrir la invitación ──
   document.getElementById('abrir').addEventListener('click', () => {
-    // Pequeño delay para que el overlay termine de subir antes de soltar las mariposas
     setTimeout(() => {
       document.body.classList.add('mariposas-activas');
     }, 800);
   });
 </script>
 
-<script>
-  // ── MARIPOSAS — se activan solo cuando se abre la invitación ──
-  document.getElementById('abrir').addEventListener('click', () => {
-    setTimeout(() => {
-      document.body.classList.add('mariposas-activas');
-    }, 800);
-  });
-</script>
-  
-<script>
-  // ⏳ LOADING SCREEN — se quita a los 7 segundos
-  const loadingScreen = document.getElementById('loading-screen');
-  setTimeout(() => {
-    loadingScreen.classList.add('loading-ocultar');
-    setTimeout(() => {
-      loadingScreen.style.display = 'none';
-    }, 800);
-  }, 7000);
-</script>
 </body>
 </html>
