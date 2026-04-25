@@ -138,20 +138,20 @@ const familias = [
     { id_familia:48, nombre_familia:"Santiago Ramos Sotelo", boletos:1 },
     { id_familia:49, nombre_familia:"Alejandro Valencia Barba", boletos:1 },
     { id_familia:50, nombre_familia:"Azul Morales Esquivel", boletos:1 },
-    { id_familia:51, nombre_familia:"Ashley Enciso Corona", boletos:1 }
-    { id_familia:52, nombre_familia:"Abigail Rangel Garcia", boletos:1 }
+    { id_familia:51, nombre_familia:"Ashley Enciso Corona", boletos:1 },
+    { id_familia:52, nombre_familia:"Abigail Rangel Garcia", boletos:1 },
     { id_familia:53, nombre_familia:"Vanessa", boletos:1 },
-    { id_familia:54, nombre_familia:"Emmanuel Ponce", boletos:1 }
-    { id_familia:55, nombre_familia:"Julieta", boletos:1 }
-    { id_familia:56, nombre_familia:"Mia", boletos:1 }
+    { id_familia:54, nombre_familia:"Emmanuel Ponce", boletos:1 },
+    { id_familia:55, nombre_familia:"Julieta", boletos:1 },
+    { id_familia:56, nombre_familia:"Mia", boletos:1 },
     { id_familia:57, nombre_familia:"Nicolas", boletos:1 },
     { id_familia:58, nombre_familia:"Daniel", boletos:1 }
-    { id_familia:59, nombre_familia:"Familia Martinez Gutierrez", boletos:2 }
-    { id_familia:60, nombre_familia:"Padre Luis Alberto", boletos:1 }
+    { id_familia:59, nombre_familia:"Familia Martinez Gutierrez", boletos:2 },
+    { id_familia:60, nombre_familia:"Padre Luis Alberto", boletos:1 },
     { id_familia:61, nombre_familia:"Familia Rojas Zarate", boletos:4 },
-    { id_familia:62, nombre_familia:"Familia Lopez Pintor", boletos:4 }
-    { id_familia:63, nombre_familia:"Familia Hernandez Brigido", boletos:3 }
-    { id_familia:64, nombre_familia:"Pablo y Belia", boletos:2 }
+    { id_familia:62, nombre_familia:"Familia Lopez Pintor", boletos:4 },
+    { id_familia:63, nombre_familia:"Familia Hernandez Brigido", boletos:3 },
+    { id_familia:64, nombre_familia:"Pablo y Belia", boletos:2 },
     { id_familia:65, nombre_familia:"Sr. Horacio y Patricia", boletos:2 },
 ];
 
