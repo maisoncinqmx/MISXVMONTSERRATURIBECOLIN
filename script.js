@@ -150,7 +150,7 @@ const familias = [
     { id_familia:61, nombre_familia:"Familia Rojas Zarate", boletos:4 },
     { id_familia:62, nombre_familia:"Familia Lopez Pintor", boletos:4 },
     { id_familia:63, nombre_familia:"Familia Hernandez Brigido", boletos:3 },
-    { id_familia:64, nombre_familia:"Pablo y Belia", boletos:2 },
+    { id_familia:64, nombre_familia:"Pablo ", boletos:2 },
     { id_familia:65, nombre_familia:"Sr. Horacio y Patricia", boletos:2 },
 ];
  
