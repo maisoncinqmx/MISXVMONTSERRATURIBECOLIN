@@ -1,5 +1,5 @@
 const fechaEvento = new Date("July 25, 2026 00:00:00").getTime();
-
+ 
 // Función que actualiza un número aplicando el efecto flip
 function actualizarConFlip(elemento, nuevoValor) {
   const valorActual = parseInt(elemento.innerText);
@@ -11,55 +11,55 @@ function actualizarConFlip(elemento, nuevoValor) {
     }, 450);
   }
 }
-
+ 
 const contador = setInterval(() => {
   const ahora = new Date().getTime();
   const distancia = fechaEvento - ahora;
-
+ 
   if (distancia < 0) {
     clearInterval(contador);
     document.querySelector(".reloj-wrapper").innerHTML = 
       '<div class="time-num" style="grid-column: span 4;">¡Hoy es el gran día!</div>';
     return;
   }
-
+ 
   const dias = Math.floor(distancia / (1000 * 60 * 60 * 24));
   const horas = Math.floor((distancia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   const minutos = Math.floor((distancia % (1000 * 60 * 60)) / (1000 * 60));
   const segundos = Math.floor((distancia % (1000 * 60)) / 1000);
-
+ 
   actualizarConFlip(document.getElementById("dias"), dias);
   actualizarConFlip(document.getElementById("horas"), horas);
   actualizarConFlip(document.getElementById("minutos"), minutos);
   actualizarConFlip(document.getElementById("segundos"), segundos);
 }, 1000);
-
+ 
 const elementos = document.querySelectorAll('.animar, .animar-izq, .animar-der');
-
+ 
 function mostrarElementos() {
   const trigger = window.innerHeight * 0.85;
-
+ 
   elementos.forEach(el => {
     const top = el.getBoundingClientRect().top;
-
+ 
     if (top < trigger) {
       el.classList.add('visible');
     }
   });
 }
-
+ 
 window.addEventListener('scroll', mostrarElementos);
 window.addEventListener('load', mostrarElementos);
-
+ 
 document.addEventListener("DOMContentLoaded", () => {
-
+ 
   const musica = document.getElementById("musica");
   const btn = document.getElementById("abrir");
   const overlay = document.getElementById("overlay");
   const toggle = document.getElementById("toggleMusica");
-
+ 
   let reproduciendo = false;
-
+ 
   // ABRIR INVITACIÓN
   btn.addEventListener("click", () => {
     musica.volume = 0.3;
@@ -69,9 +69,8 @@ document.addEventListener("DOMContentLoaded", () => {
     overlay.classList.add("ocultar");
     reproduciendo = true;
     toggle.innerText = "🔊";
-
   });
-
+ 
   // BOTÓN MÚSICA
   toggle.addEventListener("click", () => {
     if(reproduciendo){
@@ -85,7 +84,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
-
+ 
 // LISTA DE FAMILIAS
 const familias = [
     { id_familia:1, nombre_familia:"Familia Uribe Colin", boletos:4 },
@@ -154,12 +153,12 @@ const familias = [
     { id_familia:64, nombre_familia:"Pablo y Belia", boletos:2 },
     { id_familia:65, nombre_familia:"Sr. Horacio y Patricia", boletos:2 },
 ];
-
+ 
 // LEER PARAMETRO DEL LINK
 const params = new URLSearchParams(window.location.search);
 const idFamilia = parseInt(params.get("familia"));
 let familiaActual = null;
-
+ 
 if(idFamilia){
   familiaActual = familias.find(f => f.id_familia === idFamilia);
   if(familiaActual){
@@ -173,26 +172,26 @@ if(idFamilia){
     inputConfirmados.value = familiaActual.boletos; // Sugerimos que van todos por defecto
   }
 }
-
+ 
 // ENVIAR CONFIRMACION A GOOGLE SHEETS
 const scriptURL = "https://script.google.com/macros/s/AKfycbxzl6LVeT6pgqup2ah08bd7stNQyFuxyGCmzIrXqfZZncCPVN7gEPJ5H1H-2AAvn163FA/exec";
-
+ 
 function confirmarAsistencia(){
   const input = document.getElementById("confirmados");
   const confirmados = parseInt(input.value);
-
+ 
   // VALIDACIÓN DE SEGURIDAD
   if(isNaN(confirmados) || confirmados < 0){
     alert("Por favor ingresa un número válido de asistentes.");
     return;
   }
-
+ 
   if(familiaActual && confirmados > familiaActual.boletos){
     alert("Lo sentimos, solo tienes " + familiaActual.boletos + " boletos asignados.");
     input.value = familiaActual.boletos; // Corregimos el valor automáticamente
     return;
   }
-
+ 
   fetch(scriptURL,{
     method:"POST",
     body:new URLSearchParams({
@@ -210,16 +209,3 @@ function confirmarAsistencia(){
     document.getElementById("mensaje").innerHTML = "❌ Hubo un error al enviar la confirmación";
   });
 }
-
-// ── FADE TEXTOS ──
-const fadeEls = document.querySelectorAll('.fade-texto');
-function mostrarFades() {
-  const trigger = window.innerHeight * 0.88;
-  fadeEls.forEach(el => {
-    if (el.getBoundingClientRect().top < trigger) {
-      el.classList.add('visible');
-    }
-  });
-}
-window.addEventListener('scroll', mostrarFades);
-window.addEventListener('load', mostrarFades);window.addEventListener('load', mostrarFades);
